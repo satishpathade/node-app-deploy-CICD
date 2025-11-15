@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from jenkins . deployed via CICD pipeline!');
+  res.send('Hello from Jenkins. Deployed through the CI/CD pipeline!');
 });
 
 app.listen(port, () => {
