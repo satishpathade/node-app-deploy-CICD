@@ -1,4 +1,4 @@
-# 🚀 Node.js CI/CD Deployment Using Jenkinsfile, AWS EC2
+# Node.js-app CI/CD Deployment Using Jenkinsfile
 
 This project shows how to deploy a Node.js application using a Jenkins Declarative Pipeline.  
 Each GitHub push triggers an automated build, uploads the updated files to an EC2 server, and restarts the app with PM2.
@@ -13,9 +13,8 @@ Each GitHub push triggers an automated build, uploads the updated files to an EC
 
 ## Jenkinsfile
 
- Below is the Jenkinsfile used in this project:
-**[jenkinsfile](jenkinsfile)**
-
+ this is **[jenkinsfile](jenkinsfile)** used in this project:
+ 
 ---
 
 ## What the Jenkinsfile Automates
