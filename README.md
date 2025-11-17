@@ -1,4 +1,4 @@
-# Node.js Application CI/CD Pipeline using Jenkins, SSH, PM2 and AWS EC2
+# Node.js Application CI/CD Pipeline using Jenkins and AWS EC2
 
 This repository contains a complete CI/CD pipeline that automates the process of deploying a Node.js application using Jenkins, SSH, and PM2 on an AWS EC2 instance. The pipeline runs automatically on every code push through a GitHub Webhook, providing a smooth, repeatable and fully automated deployment workflow.
 
