@@ -19,7 +19,7 @@ This repository contains a complete CI/CD pipeline that automates the process of
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |----------|--------------|
