@@ -9,13 +9,11 @@ Each GitHub push triggers an automated build, uploads the updated files to an EC
 
 **GitHub → Jenkins → EC2 (Ubuntu) → PM2 → node-app**
 
-(Add your architecture image here)
-
 ---
 
 ## Jenkinsfile
 
-### Below is the Jenkinsfile used in this project:
+ Below is the Jenkinsfile used in this project:
 **[jenkinsfile](jenkinsfile)**
 
 ---
@@ -32,7 +30,7 @@ Each GitHub push triggers an automated build, uploads the updated files to an EC
 6. EC2 restarts `node-app` using PM2  
 7. The app goes live instantly  
 
-Jenkins handles the entire deployment process. No manual steps are required on the server.
+Jenkins handles the entire deployment process. No manual steps are required on the jenkins server.
 
 ---
 
@@ -68,5 +66,3 @@ sudo npm install -g pm2
 | **GitHub** | Source code hosting and version control |
 | **GitHub Webhooks** | Auto-trigger Jenkins on push |
 
-## Author
-**Satish Pathade**
