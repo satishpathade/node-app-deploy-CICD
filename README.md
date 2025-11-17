@@ -1,51 +1,39 @@
-# Node.js-app CI/CD Deployment Using Jenkinsfile
+# Node.js Application CI/CD Pipeline using Jenkins, SSH, PM2 and AWS EC2
 
-This project shows how to deploy a Node.js application using a Jenkins Declarative Pipeline.  
-Each GitHub push triggers an automated build, uploads the updated files to an EC2 server, and restarts the app with PM2.
+This repository contains a complete CI/CD pipeline that automates the process of deploying a Node.js application using Jenkins, SSH, and PM2 on an AWS EC2 instance. The pipeline runs automatically on every code push through a GitHub Webhook, providing a smooth, repeatable and fully automated deployment workflow.
 
 ---
+
+## What This Pipeline Does
+
+1. GitHub Webhook detects a push and triggers Jenkins automatically  
+2. Jenkins pulls the latest code  
+3. Installs Node.js dependencies using `npm install`  
+4. Copies updated project files to the EC2 server using SCP  
+5. PM2 restarts the application with the new code  
+6. The updated Node.js app becomes live instantly without manual steps
 
 ## Architecture
 
-**GitHub → Jenkins → EC2 (Ubuntu) → PM2 → node-app**
+**push → GitHub Webhook → Jenkins → EC2 (Ubuntu) → PM2 → node-app**
 
 ---
 
-## Jenkinsfile
+## 🛠 Tech Stack
 
- this is **[jenkinsfile](jenkinsfile)** used in this project:
- 
----
-
-## What the Jenkinsfile Automates
-
-### How the CI/CD flow works:
-
-1. Developer pushes code to GitHub  
-2. GitHub triggers a webhook  
-3. Jenkins pulls the latest code  
-4. Jenkins installs dependencies  
-5. Jenkins uploads files to EC2  
-6. EC2 restarts `node-app` using PM2  
-7. The app goes live instantly  
-
-Jenkins handles the entire deployment process. No manual steps are required on the jenkins server.
+| Category | Technologies |
+|----------|--------------|
+| **Language** | Node.js |
+| **Package Manager** | NPM |
+| **Process Manager** | PM2 |
+| **CI/CD** | Jenkins, GitHub Webhook |
+| **Source Control** | Git & GitHub |
+| **Deployment** | SSH, SCP |
+| **Server** | AWS EC2 (Ubuntu) |
+| **Automation** | Jenkins Declarative Pipeline |
 
 ---
 
-## Requirements
-
-### On EC2 (Ubuntu)
-
-Install Node.js, npm and PM2:
-
-```bash
-sudo apt update
-sudo apt install nodejs -y
-sudo apt install npm -y
-sudo npm install -g pm2
-
-```
 ### Project Structure 
 ```
 ├── app.js
@@ -53,15 +41,31 @@ sudo npm install -g pm2
 ├── package.json
 ├── README.md
 └── img/
+``` 
+---
+
+## Jenkinsfile (Full Pipeline)
+**[jenkinsfile](jenkinsfile)**
+This file contains the complete pipeline used for building and deploying the node.js application.
+
+---
+
+## Requirements
+### On EC2 (Ubuntu)
+Install Node.js, npm and PM2:
+
+```bash
+sudo apt update
+sudo apt install nodejs -y
+sudo apt install npm -y
+sudo npm install -g pm2
 ```
+---
 
-## Tech Stack
-| Tool | Purpose |
-|------|---------|
-| **Node.js** | Application runtime |
-| **Jenkins** | CI/CD pipeline |
-| **AWS EC2 (Ubuntu)** | Deployment server |
-| **PM2** | Node.js process manager |
-| **GitHub** | Source code hosting and version control |
-| **GitHub Webhooks** | Auto-trigger Jenkins on push |
+## Author
+**Satish Pathade**  
+AWS Cloud & DevOps Engineer 
 
+- GitHub: https://github.com/satishpathade  
+- LinkedIn: https://www.linkedin.com/in/satish-pathade  
+- Email: pathadesatish0@gmail.com
