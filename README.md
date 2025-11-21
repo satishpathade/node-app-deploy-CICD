@@ -15,11 +15,7 @@ This repository contains a complete CI/CD pipeline that automates the process of
 
 ## Architecture
 
-**push → GitHub Webhook → Jenkins → EC2 (Ubuntu) → PM2 → node-app**
-
-<p align="center">
-  <img src="img/nodeapp-CICD.png" alt="nodeapp CI/CI" width="100%">
-</p>
+**push → GitHub Webhook → Jenkins → EC2 (Ubuntu) → PM2 → live-app**
 
 ![nodeapp-CICD](img/nodeapp-CICD.png)
 
