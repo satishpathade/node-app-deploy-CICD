@@ -9,6 +9,9 @@ Each GitHub push triggers an automated build, uploads the updated files to an EC
 
 **GitHub → Jenkins → EC2 (Ubuntu) → PM2 → node-app**
 
+    ![CI/CD Architecture](img/nodeapp-CICD.png)
+
+
 ---
 
 ## Jenkinsfile
