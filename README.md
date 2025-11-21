@@ -21,6 +21,8 @@ This repository contains a complete CI/CD pipeline that automates the process of
   <img src="img/nodeapp-CICD.png" alt="nodeapp CI/CI" width="100%">
 </p>
 
+![nodeapp-CICD](img/nodeapp-CICD.png)
+
 ---
 
 ## Tech Stack
